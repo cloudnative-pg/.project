@@ -1,0 +1,70 @@
+# .project metadata for CloudNativePG
+# Documentation: https://github.com/cncf/automation/tree/main/utilities/dot-project
+
+# TODO: Add maturity_log entry with TOC issue URL
+# TODO: Set project_lead GitHub handle
+# TODO: Set cncf_slack_channel
+# TODO: Set identity_type under legal (has_dco, has_cla)
+# TODO: Add package_managers if distributed via registries
+
+schema_version: "1.0.0"
+slug: "cloudnativepg"
+name: "CloudNativePG"
+description: "CloudNativePG is a comprehensive platform designed to seamlessly manage PostgreSQL databases within Kubernetes environments, covering the entire operational lifecycle from initial deployment to ongoing maintenance"
+type: "project"
+# TODO: Set project lead GitHub handle
+# project_lead: "github-handle"
+# TODO: Set CNCF Slack channel
+# cncf_slack_channel: "#cloudnativepg"
+
+maturity_log:
+  - phase: "sandbox"
+    date: "2026-03-18T14:39:24Z"
+    issue: "https://github.com/cncf/toc/issues/XXX" # TODO: Set TOC issue URL
+
+repositories:
+  - "https://github.com/cloudnative-pg/cloudnative-pg"
+
+website: "https://www.cloudnative-pg.io/"
+
+artwork: "https://landscape.cncf.io/logos/cloudnative-pg.svg"
+
+adopters:
+  path: "https://github.com/cloudnative-pg/cloudnative-pg/blob/main/ADOPTERS.md"
+
+# TODO: Add package manager identifiers if your project is distributed via registries
+# package_managers:
+#   docker: "cloudnative-pg/cloudnative-pg"
+
+social:
+  twitter: "https://x.com/CloudNativePg"
+
+security:
+  policy:
+    path: "https://github.com/cloudnative-pg/cloudnative-pg/blob/main/SECURITY.md"
+  contact:
+    advisory_url: "https://github.com/cloudnative-pg/cloudnative-pg/security/advisories/new"
+
+governance:
+  contributing:
+    path: "https://github.com/cloudnative-pg/cloudnative-pg/blob/main/CONTRIBUTING.md"
+  code_of_conduct:
+    path: "https://github.com/cncf/foundation/blob/main/code-of-conduct.md"
+
+legal:
+  license:
+    path: "https://github.com/cloudnative-pg/cloudnative-pg/blob/main/LICENSE"
+  identity_type:
+    has_dco: true
+    has_cla: false
+    dco_url:
+      path: "https://developercertificate.org/"
+
+documentation:
+  readme:
+    path: "https://github.com/cloudnative-pg/cloudnative-pg/blob/main/README.md"
+
+landscape:
+  category: "App Definition and Development"
+  subcategory: "Database"
+
