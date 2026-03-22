@@ -8,10 +8,10 @@ maintainers:
     teams:
       - name: "project-maintainers"
         members:
-          - gbartolini
-          - fcanovai
-          - leonardoce
-          - sxd
-          - mnencia
           - armru
+          - fcanovai
+          - gbartolini
+          - leonardoce
+          - mnencia
           - phisco
+          - sxd

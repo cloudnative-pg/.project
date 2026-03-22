@@ -4,7 +4,7 @@
 # TODO: Add maturity_log entry with TOC issue URL
 # TODO: Set project_lead GitHub handle
 # TODO: Set identity_type under legal (has_dco, has_cla)
-# TODO: Aadd social networks
+# TODO: Add social networks
 
 schema_version: "1.0.0"
 slug: "cloudnativepg"
@@ -22,6 +22,8 @@ maturity_log:
 
 repositories:
   - "https://github.com/cloudnative-pg/cloudnative-pg"
+  - "https://github.com/cloudnative-pg/cnpg-i"
+  - "https://github.com/cloudnative-pg/cnpg-i-machinery"
 
 website: "https://www.cloudnative-pg.io/"
 
@@ -32,12 +34,11 @@ adopters:
 
 # TODO: Add package manager identifiers if your project is distributed via registries
 package_managers:
-   docker: "cloudnative-pg/cloudnative-pg"
+  docker: "cloudnative-pg/cloudnative-pg"
 
-# TODO: Add all socials
-#social:
-  # TODO: Add BlueSky Mastodon
-  #twitter: "https://x.com/CloudNativePg"
+social:
+  twitter: "https://x.com/CloudNativePg"
+  # TODO: Add BlueSky, Mastodon
 
 security:
   policy:
