@@ -1,8 +1,6 @@
 # .project metadata for CloudNativePG
 # Documentation: https://github.com/cncf/automation/tree/main/utilities/dot-project
 
-# TODO: Add maturity_log entry with TOC issue URL
-# TODO: Set identity_type under legal (has_dco, has_cla)
 # TODO: Add social networks
 
 schema_version: "1.0.0"
