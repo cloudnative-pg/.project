@@ -2,7 +2,6 @@
 # Documentation: https://github.com/cncf/automation/tree/main/utilities/dot-project
 
 # TODO: Add maturity_log entry with TOC issue URL
-# TODO: Set project_lead GitHub handle
 # TODO: Set identity_type under legal (has_dco, has_cla)
 # TODO: Add social networks
 
@@ -11,8 +10,7 @@ slug: "cloudnativepg"
 name: "CloudNativePG"
 description: "CloudNativePG is a comprehensive platform designed to seamlessly manage PostgreSQL databases within Kubernetes environments, covering the entire operational lifecycle from initial deployment to ongoing maintenance"
 type: "project"
-# TODO: Set project lead GitHub handle
-# project_lead: "github-handle"
+project_lead: "@cloudnative-pg/maintainers"
 cncf_slack_channel: "#cloudnativepg-users"
 
 maturity_log:
