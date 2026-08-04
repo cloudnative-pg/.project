@@ -13,3 +13,43 @@ maintainers:
           - gbartolini
           - leonardoce
           - mnencia
+      # The 4 entries below are the subproject-maintainer-committee teams
+      # from governance's federated-model restructuring (CNCF incubation,
+      # dev/67 branch): Core, Supply Chain, Community & Ecosystem,
+      # Extensibility. The real GitHub teams already exist
+      # (core-maintainers, supply-chain-maintainers,
+      # community-ecosystem-maintainers, extensibility-maintainers -- see
+      # cloudnative-pg/cnpg-infra's org-policy.yaml), but membership is
+      # still a placeholder mirroring project-maintainers above, not a
+      # ratified per-committee roster. Left commented out here rather
+      # than active, so this file does not present placeholder membership
+      # as if it were final to CNCF/LFX -- uncomment (and update the
+      # member lists to the real ratified rosters) once dev/67 lands.
+      # - name: "core-maintainers"
+      #   members:
+      #     - armru
+      #     - fcanovai
+      #     - gbartolini
+      #     - leonardoce
+      #     - mnencia
+      # - name: "supply-chain-maintainers"
+      #   members:
+      #     - armru
+      #     - fcanovai
+      #     - gbartolini
+      #     - leonardoce
+      #     - mnencia
+      # - name: "community-ecosystem-maintainers"
+      #   members:
+      #     - armru
+      #     - fcanovai
+      #     - gbartolini
+      #     - leonardoce
+      #     - mnencia
+      # - name: "extensibility-maintainers"
+      #   members:
+      #     - armru
+      #     - fcanovai
+      #     - gbartolini
+      #     - leonardoce
+      #     - mnencia
