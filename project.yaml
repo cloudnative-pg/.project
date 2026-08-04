@@ -99,7 +99,7 @@ slack_channels:
 
 security:
   policy:
-    path: "https://github.com/cloudnative-pg/cloudnative-pg/blob/main/SECURITY.md"
+    path: "https://github.com/cloudnative-pg/cloudnative-pg/security/policy"
   contact:
     email: "security@cloudnative-pg.io"
     advisory_url: "https://github.com/cloudnative-pg/cloudnative-pg/security/advisories/new"
@@ -123,6 +123,8 @@ governance:
     path: "https://github.com/cloudnative-pg/governance/blob/main/GOVERNANCE.md#github-teams-and-communication-channels"
   code_of_conduct:
     path: "https://github.com/cloudnative-pg/governance/blob/main/CODE_OF_CONDUCT.md"
+  change_process:
+    path: "https://github.com/cloudnative-pg/cloudnative-pg/tree/main/contribute#about-our-development-workflow"
   # vendor_neutrality_statement: no dedicated document exists yet -- this
   # is part of the active CNCF incubation work (see governance/CLAUDE.md),
   # not yet a standalone file to link to.
@@ -139,6 +141,10 @@ legal:
 documentation:
   readme:
     path: "https://github.com/cloudnative-pg/cloudnative-pg/blob/main/README.md"
+  architecture:
+    path: "https://github.com/cloudnative-pg/cloudnative-pg/blob/main/contribute/technical-architecture.md"
+  support:
+    path: "https://cloudnative-pg.io/docs/current/supported_releases"
 
 landscape:
   category: "App Definition and Development"
