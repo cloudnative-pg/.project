@@ -12,12 +12,16 @@ on:
       - 'maintainers.yaml'
   workflow_dispatch:
 
+permissions:
+  contents: read
+
 jobs:
   validate-project:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v4
         with:
+          persist-credentials: false
           fetch-depth: 0
 
       - uses: cncf/automation/.github/actions/validate-project@95d25b12337a14e4a74f690c856f6903584e839e
@@ -29,11 +33,20 @@ jobs:
     steps:
       - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v4
         with:
+          persist-credentials: false
           fetch-depth: 0
 
       - uses: cncf/automation/.github/actions/validate-maintainers@95d25b12337a14e4a74f690c856f6903584e839e
         with:
           maintainers_file: 'maintainers.yaml'
-          verify_maintainers: 'true'
+          # Disabled until the LFX LLT issue is resolved -- matches
+          # cncf/automation's own README, which recommends this same
+          # setting for the same reason ("Validation is done manually for
+          # now."). With it left on 'true', every handle lookup fails with
+          # a 401 (auth failure, not a real "not found"), regardless of
+          # whether the handle is actually a registered LFX maintainer --
+          # all 5 of ours are already listed correctly in
+          # cncf/foundation/project-maintainers.csv.
+          verify_maintainers: 'false'
         env:
           LFX_AUTH_TOKEN: ${{ secrets.LFX_AUTH_TOKEN }}

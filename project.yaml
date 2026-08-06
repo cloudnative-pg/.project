@@ -1,55 +1,133 @@
 # .project metadata for CloudNativePG
 # Documentation: https://github.com/cncf/automation/tree/main/utilities/dot-project
 
-# TODO: Add maturity_log entry with TOC issue URL
-# TODO: Set project_lead GitHub handle
-# TODO: Set cncf_slack_channel
-# TODO: Set identity_type under legal (has_dco, has_cla)
-# TODO: Add package_managers if distributed via registries
+# CNCF Incubation application is in progress (not yet ratified as a
+# maturity_log entry below until the vote actually concludes):
+# https://github.com/cncf/toc/issues/1961
 
 schema_version: "1.0.0"
 slug: "cloudnativepg"
 name: "CloudNativePG"
-description: "CloudNativePG is a comprehensive platform designed to seamlessly manage PostgreSQL databases within Kubernetes environments, covering the entire operational lifecycle from initial deployment to ongoing maintenance"
+description: "The most popular Kubernetes Operator for PostgreSQL."
 type: "project"
-# TODO: Set project lead GitHub handle
-# project_lead: "github-handle"
-# TODO: Set CNCF Slack channel
-# cncf_slack_channel: "#cloudnativepg"
+project_lead: "cloudnative-pg/admins"
 
 maturity_log:
   - phase: "sandbox"
     date: "2026-03-18T14:39:24Z"
-    issue: "https://github.com/cncf/toc/issues/XXX" # TODO: Set TOC issue URL
+    issue: "https://github.com/cncf/sandbox/issues/128"
 
 repositories:
+  - "https://github.com/cloudnative-pg/.github"
+  - "https://github.com/cloudnative-pg/.project"
+  - "https://github.com/cloudnative-pg/api"
+  - "https://github.com/cloudnative-pg/artifacts"
+  - "https://github.com/cloudnative-pg/artwork"
+  - "https://github.com/cloudnative-pg/barman-cloud"
+  - "https://github.com/cloudnative-pg/chaos-testing"
+  - "https://github.com/cloudnative-pg/charts"
+  - "https://github.com/cloudnative-pg/ciclops"
   - "https://github.com/cloudnative-pg/cloudnative-pg"
+  - "https://github.com/cloudnative-pg/cloudnative-pg.github.io"
+  - "https://github.com/cloudnative-pg/cnpg-i"
+  - "https://github.com/cloudnative-pg/cnpg-i-hello-world"
+  - "https://github.com/cloudnative-pg/cnpg-i-machinery"
+  - "https://github.com/cloudnative-pg/cnpg-infra"
+  - "https://github.com/cloudnative-pg/cnpg-playground"
+  - "https://github.com/cloudnative-pg/cnpg-template"
+  - "https://github.com/cloudnative-pg/daggerverse"
+  - "https://github.com/cloudnative-pg/docs"
+  - "https://github.com/cloudnative-pg/github-test"
+  - "https://github.com/cloudnative-pg/governance"
+  - "https://github.com/cloudnative-pg/grafana-dashboards"
+  - "https://github.com/cloudnative-pg/klio"
+  - "https://github.com/cloudnative-pg/machinery"
+  - "https://github.com/cloudnative-pg/pgbouncer-containers"
+  - "https://github.com/cloudnative-pg/plugin-barman-cloud"
+  - "https://github.com/cloudnative-pg/postgis-containers"
+  - "https://github.com/cloudnative-pg/postgres-containers"
+  - "https://github.com/cloudnative-pg/postgres-extensions-containers"
+  - "https://github.com/cloudnative-pg/postgres-keycloak-oauth-validator"
+  - "https://github.com/cloudnative-pg/postgres-trunk-containers"
+  - "https://github.com/cloudnative-pg/webtest"
 
 website: "https://www.cloudnative-pg.io/"
 
-artwork: "https://landscape.cncf.io/logos/cloudnative-pg.svg"
+artwork: "https://github.com/cncf/artwork/tree/main/projects/cloudnativepg"
 
 adopters:
   path: "https://github.com/cloudnative-pg/cloudnative-pg/blob/main/ADOPTERS.md"
 
-# TODO: Add package manager identifiers if your project is distributed via registries
-# package_managers:
-#   docker: "cloudnative-pg/cloudnative-pg"
+# Registry identifiers for every image cloudnative-pg publishes. The
+# postgres-extensions-containers repo publishes one image per extension
+# (not a single package), and postgres-trunk-containers has no fixed
+# published name at all -- it builds ephemeral images on demand from
+# whatever PostgreSQL branch/patch is requested, so it is not listed here.
+# klio's images are still published under ghcr.io/enterprisedb/klio* as of
+# this writing (the repo was only just moved from EnterpriseDB to this
+# org) -- oci_klio below is the intended cloudnative-pg/klio location,
+# not yet where the packages actually are.
+package_managers:
+  oci_cloudnativepg: "ghcr.io/cloudnative-pg/cloudnative-pg"
+  oci_postgresql: "ghcr.io/cloudnative-pg/postgresql"
+  oci_pgbouncer: "ghcr.io/cloudnative-pg/pgbouncer"
+  oci_postgis: "ghcr.io/cloudnative-pg/postgis"
+  oci_plugin_barman_cloud: "ghcr.io/cloudnative-pg/plugin-barman-cloud"
+  oci_klio: "ghcr.io/cloudnative-pg/klio"
+  oci_pgvector: "ghcr.io/cloudnative-pg/pgvector"
+  oci_postgis_extension: "ghcr.io/cloudnative-pg/postgis-extension"
+  oci_pgaudit: "ghcr.io/cloudnative-pg/pgaudit"
+  oci_pg_ivm: "ghcr.io/cloudnative-pg/pg-ivm"
+  oci_pg_crash: "ghcr.io/cloudnative-pg/pg-crash"
+  oci_timescaledb_oss: "ghcr.io/cloudnative-pg/timescaledb-oss"
+  oci_wal2json: "ghcr.io/cloudnative-pg/wal2json"
 
 social:
   twitter: "https://x.com/CloudNativePg"
+  bluesky: "https://bsky.app/profile/cloudnativepg.bsky.social"
+  mastodon: "https://mastodon.social/@CloudNativePG"
+  linkedin: "https://www.linkedin.com/company/cloudnative-pg"
+
+slack_channels:
+  - name: "#cloudnativepg-users"
+    workspace: "cncf"
+    primary: true
+  - name: "#cloudnativepg-dev"
+    workspace: "cncf"
+  - name: "#cloudnativepg-www"
+    workspace: "cncf"
 
 security:
   policy:
-    path: "https://github.com/cloudnative-pg/cloudnative-pg/blob/main/SECURITY.md"
+    path: "https://github.com/cloudnative-pg/cloudnative-pg/security/policy"
   contact:
+    email: "security@cloudnative-pg.io"
     advisory_url: "https://github.com/cloudnative-pg/cloudnative-pg/security/advisories/new"
+  threat_model:
+    path: "https://github.com/cloudnative-pg/cloudnative-pg/blob/main/.github/threat-catalog.yaml"
 
 governance:
   contributing:
-    path: "https://github.com/cloudnative-pg/cloudnative-pg/blob/main/CONTRIBUTING.md"
+    path: "https://github.com/cloudnative-pg/governance/blob/main/CONTRIBUTING.md"
+  contributor_guide:
+    path: "https://github.com/cloudnative-pg/governance/blob/main/CONTRIBUTOR_LADDER.md"
+  governance_doc:
+    path: "https://github.com/cloudnative-pg/governance/blob/main/GOVERNANCE.md"
+  gitvote_config:
+    path: "https://github.com/cloudnative-pg/governance/blob/main/.gitvote.yml"
+  decision_making_process:
+    path: "https://github.com/cloudnative-pg/governance/blob/main/GOVERNANCE.md#voting"
+  roles_and_teams:
+    path: "https://github.com/cloudnative-pg/governance/blob/main/GOVERNANCE.md#project-roles"
+  comms_channels:
+    path: "https://github.com/cloudnative-pg/governance/blob/main/GOVERNANCE.md#github-teams-and-communication-channels"
   code_of_conduct:
-    path: "https://github.com/cncf/foundation/blob/main/code-of-conduct.md"
+    path: "https://github.com/cloudnative-pg/governance/blob/main/CODE_OF_CONDUCT.md"
+  change_process:
+    path: "https://github.com/cloudnative-pg/cloudnative-pg/tree/main/contribute#about-our-development-workflow"
+  # vendor_neutrality_statement: no dedicated document exists yet -- this
+  # is part of the active CNCF incubation work (see governance/CLAUDE.md),
+  # not yet a standalone file to link to.
 
 legal:
   license:
@@ -63,8 +141,11 @@ legal:
 documentation:
   readme:
     path: "https://github.com/cloudnative-pg/cloudnative-pg/blob/main/README.md"
+  architecture:
+    path: "https://github.com/cloudnative-pg/cloudnative-pg/blob/main/contribute/technical-architecture.md"
+  support:
+    path: "https://cloudnative-pg.io/docs/current/supported_releases"
 
 landscape:
   category: "App Definition and Development"
   subcategory: "Database"
-
