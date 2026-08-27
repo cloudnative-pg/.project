@@ -50,6 +50,7 @@ repositories:
   - "https://github.com/cloudnative-pg/postgres-keycloak-oauth-validator"
   - "https://github.com/cloudnative-pg/postgres-trunk-containers"
   - "https://github.com/cloudnative-pg/webtest"
+  - "https://github.com/cloudnative-pg/cnpg-headlamp-plugin"
 
 website: "https://www.cloudnative-pg.io/"
 
