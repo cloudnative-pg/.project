@@ -3,7 +3,7 @@
 
 
 maintainers:
-  - project_id: "cloudnative-pg"
+  - project_id: "cloudnativepg"
     org: "cloudnative-pg"
     teams:
       - name: "project-maintainers"
