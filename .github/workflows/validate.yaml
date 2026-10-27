@@ -44,9 +44,7 @@ jobs:
           # setting for the same reason ("Validation is done manually for
           # now."). With it left on 'true', every handle lookup fails with
           # a 401 (auth failure, not a real "not found"), regardless of
-          # whether the handle is actually a registered LFX maintainer --
-          # all 5 of ours are already listed correctly in
-          # cncf/foundation/project-maintainers.csv.
+          # whether the handle is actually a registered LFX maintainer.
           verify_maintainers: 'false'
         env:
           LFX_AUTH_TOKEN: ${{ secrets.LFX_AUTH_TOKEN }}
