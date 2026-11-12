@@ -1,10 +1,6 @@
 # .project metadata for CloudNativePG
 # Documentation: https://github.com/cncf/automation/tree/main/utilities/dot-project
 
-# CNCF Incubation application is in progress (not yet ratified as a
-# maturity_log entry below until the vote actually concludes):
-# https://github.com/cncf/toc/issues/1961
-
 schema_version: "1.0.0"
 slug: "cloudnativepg"
 name: "CloudNativePG"
@@ -16,6 +12,9 @@ maturity_log:
   - phase: "sandbox"
     date: "2026-03-18T14:39:24Z"
     issue: "https://github.com/cncf/sandbox/issues/128"
+  - phase: "incubating"
+    date: "2026-11-02T00:00:00Z"
+    issue: "https://github.com/cncf/toc/issues/1961"
 
 repositories:
   - "https://github.com/cloudnative-pg/.github"
